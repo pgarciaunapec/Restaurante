@@ -1,0 +1,339 @@
+        /* Custom variables to match main site */
+        :root {
+            --primary-color: #d4af37;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f8f8;
+            --text-dark: #333;
+            --text-light: #fff;
+            --overlay-dark: rgba(0, 0, 0, 0.5);
+        }
+        
+        .menu-header {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
+            color: var(--text-light);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .section-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            background: white;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+        }
+        
+        .product-img {
+            height:auto;
+            object-fit: contain;
+            width: 100%;
+            object-position: center;
+        }
+        
+        .filter-btn {
+            margin: 0.25rem;
+        }
+        
+        .pagination-container {
+            margin-top: 2rem;
+        }
+        
+        .ingredient-tag {
+            background: #f0f0f0;
+            color: var(--text-dark);
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.1rem;
+            display: inline-block;
+            border: 1px solid #ddd;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            border: none;
+        }
+        
+        .back-to-top:hover {
+            background-color: #b8972d;
+            transform: translateY(-2px);
+        }
+        
+        /* Remove numbering from lists */
+        ol, ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .page-item {
+            list-style: none;
+        }
+        
+        /* Match main site button styles */
+        .btn-success {
+            background-color: var(--primary-color);
+            border: none;
+            color: #000;
+        }
+        
+        .btn-success:hover {
+            background-color: #b8972d;
+            color: #000;
+        }
+        
+        /* Header styling to match main site */
+        .main-header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .nav-link {
+            color: var(--text-light) !important;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        /* Footer styling */
+        .main-footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 50px 0 20px;
+        }
+        
+        .social-link {
+            color: var(--text-light);
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .social-link:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Logo styling */
+        .logo-text {
+            font-family: 'Brush Script MT', cursive;
+            color: var(--text-light);
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+        
+        /* Menu grid spacing - Exactly 3px between cards */
+        #productsContainer {
+            gap: 3px;
+        }
+        
+        #productsContainer .col {
+            padding-left: 1.5px;
+            padding-right: 1.5px;
+        }
+        
+        /* Card spacing */
+        .product-card {
+            margin-bottom: 3px;
+        }
+        
+        /* Responsive improvements for menu page */
+        @media (max-width: 992px) {
+            .product-card {
+                margin-bottom: 3px;
+            }
+            
+            #productsContainer {
+                gap: 3px;
+            }
+            
+            #productsContainer .col {
+                padding-left: 1.5px;
+                padding-right: 1.5px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-header {
+                padding: 1.5rem 0;
+            }
+            
+            .menu-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .product-card {
+                margin-bottom: 3px;
+            }
+            
+            #productsContainer {
+                gap: 3px;
+            }
+            
+            #productsContainer .col {
+                padding-left: 1.5px;
+                padding-right: 1.5px;
+            }
+            
+            .product-img {
+                height: 150px;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .menu-header {
+                padding: 1rem 0;
+            }
+            
+            .menu-header h1 {
+                font-size: 2rem;
+            }
+            
+            .menu-header p {
+                font-size: 1rem;
+            }
+            
+            .product-card {
+                margin-bottom: 3px;
+            }
+            
+            #productsContainer {
+                gap: 3px;
+            }
+            
+            #productsContainer .col {
+                padding-left: 1.5px;
+                padding-right: 1.5px;
+            }
+            
+            .product-img {
+                height: 120px;
+                object-fit: contain;
+                object-position: center;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .h5 {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Custom Alert Styles (matching main site) */
+        .custom-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+            border: 2px solid #d4af37;
+        }
+        
+        .custom-alert h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .custom-alert p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+        
+        .alert-button {
+            background-color: #d4af37;
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .alert-button:hover {
+            background-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .alert-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Button group styling for product cards */
+        .btn-group {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .btn-group .btn {
+            flex: 1;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .btn-warning {
+            background-color: #ffc107;
+            color: #000;
+        }
+        
+        .btn-warning:hover {
+            background-color: #e0a800;
+            color: #000;
+        }

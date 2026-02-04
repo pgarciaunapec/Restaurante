@@ -460,6 +460,28 @@ body {
     .reservations-content h3 {
         font-size: 2rem;
     }
+    
+    /* Improved mobile responsiveness */
+    .container {
+        padding: 0 15px;
+    }
+    
+    .btn-hero {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .service-card {
+        height: 350px;
+    }
+    
+    .card-overlay h3 {
+        font-size: 1.8rem;
+    }
+    
+    .card-overlay p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -478,5 +500,42 @@ body {
     
     .service-card {
         height: 300px;
+    }
+    
+    .services-grid {
+        gap: 20px;
+    }
+    
+    .story-content {
+        padding: 20px 15px;
+    }
+    
+    .story-content h2 {
+        font-size: 2rem;
+    }
+    
+    .reservations-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .reservations-content p {
+        font-size: 1rem;
+    }
+    
+    /* Enhanced small screen responsiveness */
+    .container {
+        padding: 0 10px;
+    }
+    
+    .header {
+        padding: 10px 0;
+    }
+    
+    .navigation ul {
+        gap: 10px;
+    }
+    
+    .navigation a {
+        font-size: 1rem;
     }
 }

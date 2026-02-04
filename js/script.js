@@ -9,37 +9,9 @@ class RestaurantWebsite {
     }
     
     init() {
-        this.setupSmoothScrolling();
         this.setupHeaderScrollEffect();
         this.setupButtonInteractions();
         this.setupMobileMenu();
-    }
-    
-    // Smooth scrolling for navigation links
-    setupSmoothScrolling() {
-        this.navigationLinks.forEach((link) => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                if (targetId) {
-                    this.scrollToSection(targetId);
-                }
-            });
-        });
-    }
-    
-    // Scroll to specific section with offset for fixed header
-    scrollToSection(targetId) {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            const headerHeight = this.header ? this.header.offsetHeight : 80;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
     }
     
     // Header effect on scroll
@@ -101,12 +73,8 @@ class RestaurantWebsite {
             case 'Reserva Una Mesa':
                 this.showComingSoonAlert('Reservaciones', 'Esta función estará disponible próximamente.');
                 break;
-            case 'Nuestros Servicios':
-                this.showComingSoonAlert('Nuestros Servicios', 'Esta función estará disponible próximamente.');
-                break;
-            case 'Planea Tu Evento':
-                this.showComingSoonAlert('Eventos Privados', 'Esta función estará disponible próximamente.');
-                break;
+
+
             case 'Conoce Más Sobre Nosotros':
                 this.showComingSoonAlert('Sobre Nosotros', 'Esta función estará disponible próximamente.');
                 break;
@@ -138,57 +106,10 @@ class RestaurantWebsite {
     // Coming soon alert
     showComingSoonAlert(title, message) {
         console.log('Showing coming soon alert:', title, message);
-        this.showCustomAlert(title, message, 'Entendido');
+        this.showBootstrapModal(title, message);
     }
     
-    // Custom alert function
-    showCustomAlert(title, message, buttonText) {
-        // Create overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'alert-overlay';
-        
-        // Create alert container
-        const alertBox = document.createElement('div');
-        alertBox.className = 'custom-alert';
-        
-        // Create content
-        alertBox.innerHTML = `
-            <h3>${title}</h3>
-            <p>${message.replace(/\n/g, '<br>')}</p>
-            <button class="alert-button">${buttonText}</button>
-        `;
-        
-        // Add to DOM
-        document.body.appendChild(overlay);
-        document.body.appendChild(alertBox);
-        
-        // Close on button click
-        const closeButton = alertBox.querySelector('.alert-button');
-        if (closeButton) {
-            closeButton.addEventListener('click', () => {
-                document.body.removeChild(overlay);
-                document.body.removeChild(alertBox);
-            });
-        }
-        
-        // Close on overlay click
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
-                document.body.removeChild(overlay);
-                document.body.removeChild(alertBox);
-            }
-        });
-        
-        // Close on Escape key
-        const closeOnEscape = (e) => {
-            if (e.key === 'Escape') {
-                document.body.removeChild(overlay);
-                document.body.removeChild(alertBox);
-                document.removeEventListener('keydown', closeOnEscape);
-            }
-        };
-        document.addEventListener('keydown', closeOnEscape);
-    }
+
     
     // Mobile menu functionality
     setupMobileMenu() {
