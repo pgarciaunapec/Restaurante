@@ -1,0 +1,36 @@
+# Archivos antiguos de la versión HTML/JS
+css_old/
+js_old/
+pages_old/
+index_old.html
+
+# Node modules
+node_modules/
+react-app/node_modules/
+
+# Build outputs
+dist/
+react-app/dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.production
