@@ -1,0 +1,244 @@
+.about-page-container {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding-top: 80px;
+}
+
+.about-page-banner {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  padding: 100px 40px;
+  color: white;
+}
+
+.about-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #d4af37;
+}
+
+.about-page-tagline {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.about-main-content {
+  padding: 70px 20px;
+}
+
+.about-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-story-block,
+.about-journey-block,
+.about-present-block {
+  background: white;
+  border-radius: 16px;
+  padding: 60px 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-heading {
+  font-size: 2.8rem;
+  margin-bottom: 35px;
+  color: #2d2d2d;
+  font-weight: 400;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.content-row-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.content-column-wide {
+  max-width: 950px;
+  width: 100%;
+}
+
+.large-text {
+  font-size: 1.35rem;
+  line-height: 1.9;
+  color: #444;
+  margin: 0;
+}
+
+.content-row-split {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.content-column-half {
+  flex: 1;
+}
+
+.regular-text {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #555;
+  margin: 0;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rounded-image {
+  border-radius: 12px;
+}
+
+.shadowed-image {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.mission-vision-wrapper {
+  margin-top: 60px;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+  border-radius: 16px;
+}
+
+.mission-vision-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.mv-cards-row {
+  display: flex;
+  gap: 40px;
+}
+
+.mv-card-column {
+  flex: 1;
+}
+
+.mv-card {
+  background: white;
+  padding: 45px 35px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+}
+
+.mv-card-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.mv-icon {
+  font-size: 2rem;
+  color: #d4af37;
+}
+
+.mv-card-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-page-title {
+    font-size: 2.8rem;
+  }
+
+  .about-page-tagline {
+    font-size: 1.2rem;
+  }
+
+  .about-story-block,
+  .about-journey-block,
+  .about-present-block {
+    padding: 40px 25px;
+  }
+
+  .section-heading {
+    font-size: 2.2rem;
+  }
+
+  .large-text {
+    font-size: 1.15rem;
+  }
+
+  .regular-text {
+    font-size: 1.05rem;
+  }
+
+  .content-row-split {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mv-cards-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mv-card {
+    padding: 35px 25px;
+  }
+
+  .mv-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page-title {
+    font-size: 2.2rem;
+  }
+
+  .about-page-banner {
+    padding: 70px 20px;
+  }
+
+  .about-story-block,
+  .about-journey-block,
+  .about-present-block {
+    padding: 30px 20px;
+  }
+
+  .section-heading {
+    font-size: 1.9rem;
+  }
+
+  .large-text {
+    font-size: 1.05rem;
+  }
+
+  .mv-card-title {
+    font-size: 1.3rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mv-card-text {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,190 @@
+.services-page-container {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding-top: 80px;
+}
+
+.services-page-banner {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 40px;
+  color: white;
+}
+
+.services-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-page-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #d4af37;
+}
+
+.services-page-tagline {
+  font-size: 1.6rem;
+  opacity: 0.95;
+}
+
+.services-main-content {
+  padding: 80px 20px;
+}
+
+.services-content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services-intro-block {
+  background: white;
+  border-radius: 16px;
+  padding: 60px 50px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.services-section-heading {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  color: #2d2d2d;
+  font-weight: 400;
+}
+
+.services-intro-text {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #555;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.services-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-offering-card {
+  background: white;
+  border-radius: 14px;
+  padding: 40px 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.service-offering-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.offering-card-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+  font-weight: 500;
+}
+
+.offering-card-description {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #666;
+  margin: 0;
+}
+
+.services-quality-block {
+  background: linear-gradient(135deg, #d4af37 0%, #b8972d 100%);
+  border-radius: 16px;
+  padding: 60px 50px;
+  text-align: center;
+  color: white;
+}
+
+.quality-block-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.quality-block-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .services-page-title {
+    font-size: 2.8rem;
+  }
+
+  .services-page-tagline {
+    font-size: 1.3rem;
+  }
+
+  .services-intro-block {
+    padding: 40px 30px;
+  }
+
+  .services-section-heading {
+    font-size: 2.2rem;
+  }
+
+  .services-intro-text {
+    font-size: 1.1rem;
+  }
+
+  .services-offerings-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .services-quality-block {
+    padding: 50px 30px;
+  }
+
+  .quality-block-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-page-title {
+    font-size: 2.2rem;
+  }
+
+  .services-page-banner {
+    padding: 80px 20px;
+  }
+
+  .services-intro-block {
+    padding: 30px 20px;
+  }
+
+  .services-section-heading {
+    font-size: 1.9rem;
+  }
+
+  .service-offering-card {
+    padding: 30px 25px;
+  }
+
+  .offering-card-title {
+    font-size: 1.6rem;
+  }
+
+  .quality-block-heading {
+    font-size: 1.8rem;
+  }
+
+  .quality-block-text {
+    font-size: 1.1rem;
+  }
+}

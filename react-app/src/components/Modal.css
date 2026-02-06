@@ -1,0 +1,141 @@
+.dialog-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.backdrop-layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  animation: fadeInBackdrop 0.2s ease-out;
+}
+
+@keyframes fadeInBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog-box {
+  position: relative;
+  background: linear-gradient(145deg, #1f1f1f 0%, #2a2a2a 100%);
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  min-width: 320px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  animation: slideInDialog 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideInDialog {
+  from {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.dialog-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.dialog-heading {
+  color: #d4af37;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: rotate(90deg);
+}
+
+.dialog-main-section {
+  padding: 1.75rem;
+}
+
+.dialog-text {
+  color: #e5e5e5;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.dialog-bottom-section {
+  padding: 1.25rem 1.75rem 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-button {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.confirm-button:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
+}
+
+.confirm-button:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .dialog-box {
+    min-width: 280px;
+  }
+
+  .dialog-heading {
+    font-size: 1.25rem;
+  }
+
+  .dialog-text {
+    font-size: 0.95rem;
+  }
+}
